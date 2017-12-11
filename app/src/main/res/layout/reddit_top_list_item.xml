@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="?android:attr/selectableItemBackground"
+    android:padding="4dp">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/reddit_rating_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="2"
+        android:textSize="@dimen/reddit_rating_text_size"
+        android:gravity="center"/>
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/reddit_thumb_image_view"
+        android:layout_gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_weight="2"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="4dp"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/reddit_title_text_view"
+            android:layout_width="match_parent"
+            android:textColor="@color/link_blue"
+            android:textSize="@dimen/reddit_title_text_size"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/reddit_author_and_subreddit_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/reddit_post_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/reddit_comments_amount_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>
