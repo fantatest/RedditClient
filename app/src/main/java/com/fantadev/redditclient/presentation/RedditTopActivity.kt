@@ -11,6 +11,7 @@ import kotlinx.android.synthetic.main.activity_reddit_top.*
 import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.RecyclerView
 import android.view.View
+import com.fantadev.redditclient.presentation.utils.Constants
 
 
 class RedditTopActivity : AppCompatActivity(), RedditTopContract.View {
@@ -38,7 +39,8 @@ class RedditTopActivity : AppCompatActivity(), RedditTopContract.View {
                 if (!reddit_top_swipe_refresh_layout.isRefreshing && !loading/*&& !mEndOfList*/) {
                     if (visibleItemCount + firstVisibleItemPosition >= totalItemCount - 2
                             && firstVisibleItemPosition >= 0
-                            && totalItemCount >= 25) {
+                            && totalItemCount >= Constants.itemsInQueryLimit
+                            && totalItemCount <= Constants.maxItemsLimit) {
                         presenter.onLoadNextPage()
                     }
                 }

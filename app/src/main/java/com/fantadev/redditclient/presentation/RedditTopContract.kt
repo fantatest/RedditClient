@@ -17,7 +17,6 @@ interface RedditTopContract {
         fun onCreate(view : View)
         fun onLoadNextPage()
         fun onRefresh()
-        //fun getTopReddits()
         fun onDestroy()
     }
 }

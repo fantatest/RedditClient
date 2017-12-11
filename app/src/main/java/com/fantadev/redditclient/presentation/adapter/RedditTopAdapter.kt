@@ -33,11 +33,11 @@ class RedditTopAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         if (shouldClearPrevious) {
             redditList.clear()
         }
-        shouldShowLoading != list.isEmpty()
         redditList.addAll(list)
         val diffResult = DiffUtil.calculateDiff(RedditListUtilsCallback(oldReddits, redditList))
         diffResult.dispatchUpdatesTo(this)
-        //notifyDataSetChanged()
+
+        shouldShowLoading = !(list.isEmpty()) && redditList.size <= Constants.maxItemsLimit
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): RecyclerView.ViewHolder {

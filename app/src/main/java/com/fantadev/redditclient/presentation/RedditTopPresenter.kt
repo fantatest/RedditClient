@@ -16,8 +16,6 @@ class RedditTopPresenter : RedditTopContract.Presenter {
     private var observed = 1
     private var redditAfter: String? = null
 
-    //private var loading: Boolean = false
-
     private val subs : CompositeDisposable = CompositeDisposable()
 
     override fun onCreate(view: RedditTopContract.View) {
